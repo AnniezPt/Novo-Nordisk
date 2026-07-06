@@ -10,14 +10,11 @@
         /* Estilos personalizados para el diagrama de flujo */
         .flowchart-arrow {
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .flowchart-arrow::after {
             content: '';
             position: absolute;
-            right: -20px;
+            right: -28px; /* Ajustado al centro del margen derecho */
             top: 50%;
             transform: translateY(-50%);
             border-top: 10px solid transparent;
@@ -25,7 +22,7 @@
             border-left: 15px solid #cbd5e1; /* slate-300 */
             z-index: 10;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) { /* Modificado para incluir iPads/Tablets en el diseño vertical */
             .flowchart-arrow::after {
                 right: 50%;
                 bottom: -25px;
@@ -97,10 +94,10 @@
                 <p class="mb-6 text-slate-600">El abordaje de una pregunta de investigación (ej. <em>"Impacto de los ritmos circadianos y hábitos matutinos en la salud cardiovascular y metabólica"</em>) se divide en cuatro actos fundamentales:</p>
                 
                 <!-- Diagrama Flexbox -->
-                <div class="flex flex-col md:flex-row justify-between items-stretch gap-4 md:gap-0">
+                <div class="flex flex-col lg:flex-row justify-between items-stretch gap-8 lg:gap-0">
                     
                     <!-- Paso 1 -->
-                    <div class="flex-1 bg-white border-2 border-slate-200 rounded-lg p-4 text-center shadow-sm flowchart-arrow md:mr-10 z-10 relative">
+                    <div class="flex-1 bg-white border-2 border-slate-200 rounded-lg p-4 text-center shadow-sm flowchart-arrow lg:mr-10 z-10 relative">
                         <div class="bg-blue-100 text-novo-accent w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                             <i class="fas fa-compass text-xl"></i>
                         </div>
@@ -109,7 +106,7 @@
                     </div>
 
                     <!-- Paso 2 -->
-                    <div class="flex-1 bg-white border-2 border-slate-200 rounded-lg p-4 text-center shadow-sm flowchart-arrow md:mr-10 z-10 relative">
+                    <div class="flex-1 bg-white border-2 border-slate-200 rounded-lg p-4 text-center shadow-sm flowchart-arrow lg:mr-10 z-10 relative">
                         <div class="bg-blue-100 text-novo-accent w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                             <i class="fas fa-check-double text-xl"></i>
                         </div>
@@ -118,7 +115,7 @@
                     </div>
 
                     <!-- Paso 3 -->
-                    <div class="flex-1 bg-white border-2 border-slate-200 rounded-lg p-4 text-center shadow-sm flowchart-arrow md:mr-10 z-10 relative">
+                    <div class="flex-1 bg-white border-2 border-slate-200 rounded-lg p-4 text-center shadow-sm flowchart-arrow lg:mr-10 z-10 relative">
                         <div class="bg-blue-100 text-novo-accent w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                             <i class="fas fa-project-diagram text-xl"></i>
                         </div>
